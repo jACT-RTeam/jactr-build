@@ -2,6 +2,7 @@ ace-editor:1.1
 branch-api:1.8
 cloudbees-folder:5.10
 credentials:2.0
+credentials-binding:1.7
 durable-task:1.10
 git:2.4.4
 git-client:1.19.6
@@ -20,6 +21,7 @@ pipeline-input-step:2.0
 pipeline-rest-api:1.4
 pipeline-stage-step:2.1
 pipeline-stage-view:1.4
+plain-credentials:1.2
 project-inheritance:1.5.3
 promoted-builds:2.26
 rebuild:1.25
@@ -36,7 +38,7 @@ workflow-cps:2.2
 workflow-cps-global-lib:2.0
 workflow-durable-task-step:2.0
 workflow-job:2.2
-workflow-multibranch:2.0
+workflow-multibranch:2.3
 workflow-scm-step:2.0
 workflow-step-api:2.0
 workflow-support:2.0
