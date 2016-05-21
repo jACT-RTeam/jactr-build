@@ -8,7 +8,7 @@ git-client:1.19.6
 git-server:1.6
 handlebars:1.1.1
 jquery-detached:1.2.1
-job-dsl-plugin:1.46
+job-dsl:1.46
 junit:1.13
 mailer:1.17
 mapdb-api:1.0.6.0
