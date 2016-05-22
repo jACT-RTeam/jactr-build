@@ -25,4 +25,4 @@ COPY plugins.txt /usr/share/jenkins/plugins.txt
 RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
 
 # See https://wiki.jenkins-ci.org/display/JENKINS/Starting+and+Accessing+Jenkins#StartingandAccessingJenkins-CommandLineParameters
-ENV JENKINS_OPTS --httpPort=-1 --httpsPort=8443 --ajp13Port=-1  --httpsCertificate=/var/jenkins_home/https_cert --httpsPrivateKey=/var/jenkins_home/https_key
+ENV JENKINS_OPTS --httpPort=-1 --httpsPort=8443 --ajp13Port=-1   --httpsKeyStore=/var/jenkins_home/https_keystore --httpsKeyStorePassword=`cat /var/jenkins_home/https_keystore_password`
