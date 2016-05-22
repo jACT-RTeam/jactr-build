@@ -7,6 +7,8 @@ durable-task:1.10
 git:2.4.4
 git-client:1.19.6
 git-server:1.6
+github:1.19.1
+github-api:1.75
 handlebars:1.1.1
 jquery-detached:1.2.1
 job-dsl:1.46
