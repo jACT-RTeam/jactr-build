@@ -3,6 +3,7 @@ branch-api:1.8
 cloudbees-folder:5.10
 credentials:2.0
 credentials-binding:1.7
+digitalocean-plugin:0.10
 durable-task:1.10
 git:2.4.4
 git-client:1.19.6
