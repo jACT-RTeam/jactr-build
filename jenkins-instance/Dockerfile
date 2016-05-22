@@ -6,7 +6,17 @@ RUN apt-get update \
 	&& apt-get install -y maven haveged
 
 # Install let's encrypt certbot, this might need to be adjusted according to https://certbot.eff.org/
-RUN apt-get install -y letsencrypt -t jessie-backports
+RUN apt-get install -y letsencrypt -t jessie-backports \
+	&& letsencrypt --version \
+	&& mkdir /var/jenkins_home/etc_letsencrypt \
+	&& chown 1000:000 /var/jenkins_home/etc_letsencrypt \
+	&& ln -s /var/jenkins_home/etc_letsencrypt /etc/letsencrypt \
+	&& mkdir /var/jenkins_home/var_lib_letsencrypt \
+	&& chown 1000:000 /var/jenkins_home/var_lib_letsencrypt \
+	&& ln -s /var/jenkins_home/var_lib_letsencrypt /var/lib/letsencrypt \
+	&& mkdir /var/jenkins_home/var_log_letsencrypt \
+	&& chown 1000:000 /var/jenkins_home/var_log_letsencrypt \
+	&& ln -s /var/jenkins_home/var_log_letsencrypt /var/log/letsencrypt
 
 USER jenkins
 COPY plugins.txt /usr/share/jenkins/plugins.txt
