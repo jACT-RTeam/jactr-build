@@ -3,7 +3,10 @@ FROM jenkins:latest
 USER root
 RUN apt-get update \
 	&& apt-get upgrade -y \
-	&& apt-get install -y maven
+	&& apt-get install -y maven haveged
+
+# Install let's encrypt certbot, this might need to be adjusted according to https://certbot.eff.org/
+RUN apt-get install -y letsencrypt -t jessie-backports
 
 USER jenkins
 COPY plugins.txt /usr/share/jenkins/plugins.txt
